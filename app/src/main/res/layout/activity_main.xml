@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+        >
+        <ImageView
+            android:layout_marginTop="0dp"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_rowSpan="2"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            android:src="@mipmap/globe_front"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/activity_vertical_margin"
+            android:maxWidth="150dp"
+            android:textColor="#ffff"
+            android:text="Nguyen Minh Nhut\nHo Chi Minh City"
+            android:layout_gravity="center"
+            android:id="@+id/txtName"/>
+         <TextView
+            android:background="@drawable/round_button"
+            android:backgroundTint="#ffff"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/search_icon"
+            android:hint=""
+            android:paddingStart="@dimen/activity_vertical_margin"
+            android:paddingEnd="@dimen/activity_vertical_margin"
+            android:gravity="center_vertical"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/l1"
+        android:background="#cfdff9"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You've been to ... countries"/>
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/webview">
+
+        </WebView>
+
+    </LinearLayout>
+</RelativeLayout>
